@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Assignment_4._5___Methods
@@ -11,6 +12,7 @@ namespace Assignment_4._5___Methods
         static void Main(string[] args)
         {
             int drawing;
+            string answer;
 
             Console.WriteLine("Choose Who You Want To Draw:");
             Console.WriteLine("1 = Penguin");
@@ -48,6 +50,27 @@ namespace Assignment_4._5___Methods
                 DrawCartman();
             }
 
+            Console.WriteLine("Wanna hear a Knock Knock Joke?");
+            answer = Console.ReadLine();
+
+            if (answer.ToLower().Trim() == "yes")
+            {
+                Console.WriteLine("Great!");
+                KnockKnockJoke();
+            }
+
+            else 
+            {
+                Console.WriteLine("Too Bad!");
+                KnockKnockJoke();
+            }
+                
+
+                Console.WriteLine();
+            Console.WriteLine("Ahahahahahahahaha! *Ba-Dum CRASH!*");
+
+
+
 
         }
 
@@ -67,8 +90,19 @@ namespace Assignment_4._5___Methods
         {
             Console.WriteLine("      .--..--..--..--..--..--.\r\n    .' \\  (`._   (_)     _   \\\r\n  .'    |  '._)         (_)  |\r\n  \\ _.')\\      .----..---.   /\r\n  |(_.'  |    /    .-\\-.  \\  |\r\n  \\     0|    |   ( O| O) | o|\r\n   |  _  |  .--.____.'._.-.  |\r\n   \\ (_) | o         -` .-`  |\r\n    |    \\   |`-._ _ _ _ _\\ /\r\n    \\    |   |  `. |_||_|   |\r\n    | o  |    \\_      \\     |     -.   .-.\r\n    |.-.  \\     `--..-'   O |     `.`-' .'\r\n  _.'  .' |     `-.-'      /-.__   ' .-'\r\n.' `-.` '.|='=.='=.='=.='=|._/_ `-'.'\r\n`-._  `.  |________/\\_____|    `-.'\r\n   .'   ).| '=' '='\\/ '=' |\r\n   `._.`  '---------------'\r\n           //___\\   //___\\\r\n             ||       ||\r\n    LGB      ||_.-.   ||_.-.\r\n            (_.--__) (_.--__)\r\n");
         }
-        
-        
-        
+
+        public static void KnockKnockJoke() 
+        {
+            Console.WriteLine("Knock Knock!");
+            Console.WriteLine("You: Who's there?");
+            Console.WriteLine("No One.");
+            Console.WriteLine("No One Who?");
+            Console.WriteLine("*Silence*");
+
+
+        }
+
+
+
     }
 }
